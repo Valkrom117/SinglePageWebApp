@@ -19,13 +19,11 @@
       <button class="btn btn-primary" ng-click="list.logItems()">Narrow It Down For Me!</button>
     </div>
 
-    <!-- testing area -->
     <div class="form-group">
-      <narrowed-items found-items="list.foundItems" on-remove="list.removeItem(index)"></narrowed-items>
+      <div style="clear: left;" ng-if="list.isEmptyList()">Nothing Found!</div>
+      <narrowed-items found-items="list.foundItems" on-remove="list.removeItem(index)" search-term="list.searchTerm"></narrowed-items>
     </div>
-    <!-- testing area -->
 
-    <!-- <found-items found-items="...." on-remove="...."></found-items> -->
   </div>
 
 </body>
