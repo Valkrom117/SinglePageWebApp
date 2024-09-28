@@ -1,0 +1,21 @@
+<div class="container">
+    <div ng-show="myInfoCtrl.userExist()">
+        Username: {{ myInfoCtrl.user.username }} <br>
+        Email: {{ myInfoCtrl.user.email }} <br>
+        Phone number: {{ myInfoCtrl.user.phone }} <br>
+        Favorite Dish: {{ myInfoCtrl.item.name }} <br>
+        {{ myInfoCtrl.item.description }} <br>
+        <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{ myInfoCtrl.user.favoritedish }}/{{ myInfoCtrl.item.short_name }}.jpg" alt="{{$ctrl.menuItem.name}}">
+    </div>
+    <div ng-hide="myInfoCtrl.userExist()">
+        
+            Not Signed Up Yet. <a class="text-primary" ui-sref="public.signup"> Sign up Now! </a>
+
+    </div>
+    <div>
+
+    </div>
+</div>
+
+
+
